@@ -24,7 +24,7 @@ public class BaseTest
 
 
     //1. Initilize webDriver
-    //2. get data from Json
+    //2. get data from Jsona
     //3. launch application
     //4. take screen shoot
     public WebDriver initilizeDriver() throws IOException
@@ -73,7 +73,7 @@ public class BaseTest
     }
 
 
-    @BeforeMethod(alwaysRun = true)
+
     public LoginPage launchApplication() throws IOException
     {
         driver = initilizeDriver();

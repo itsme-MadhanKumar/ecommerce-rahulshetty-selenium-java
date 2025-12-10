@@ -4,7 +4,7 @@ Feature: purchase the order from exommerce website
   Background: I landed on Rahulshetty ecommerce page
 
   Scenario Outline:Positive testcase of submiting order
-    Given login using username<username> and passowrd<passowrd>
+    Given login using username <username> and password <password>
     When I add product <productname> to cart
     And Checkout <productname> and submit the order
     Then "THANKYOU FOR THE ORDER." message is displayed on confirmation page

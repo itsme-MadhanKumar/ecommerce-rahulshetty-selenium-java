@@ -40,7 +40,6 @@ public class CatalogPage extends AbstractComponent
     public List<WebElement> getProductsNames()
     {
         waitForTheElementoAppear(productBy);
-
         return allProducts;
     }
     public WebElement getTargetNameWebElement(String name)
