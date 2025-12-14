@@ -35,6 +35,6 @@ public class AbstractComponent
 
     public void ActionTOMoveMouse(Actions actions,WebElement element)
     {
-        actions.moveToElement(element).perform();
+        actions.moveToElement(element).build().perform();
     }
 }

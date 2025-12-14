@@ -19,8 +19,8 @@ import java.util.List;
 import java.util.Properties;
 public class BaseTest
 {
-    public WebDriver driver;
-    public LoginPage loginPage;
+    public static WebDriver driver;
+    public  static LoginPage loginPage;
 
 
     //1. Initilize webDriver
@@ -73,7 +73,7 @@ public class BaseTest
     }
 
 
-
+    @BeforeMethod(alwaysRun = true)
     public LoginPage launchApplication() throws IOException
     {
         driver = initilizeDriver();

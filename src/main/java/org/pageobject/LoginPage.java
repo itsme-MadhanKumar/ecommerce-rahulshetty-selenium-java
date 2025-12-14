@@ -1,6 +1,6 @@
 package org.pageobject;
 import abstractcomponents.AbstractComponent;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,11 +39,22 @@ public class LoginPage extends AbstractComponent
     @FindBy(css = "[routerlink$='/dashboard/myorders']")
     WebElement clickOderButton;
 
+     ////div[@class='ng-tns-c4-1 ng-star-inserted ng-trigger ng-trigger-flyInOut ngx-toastr toast-error']
+    By error = By.xpath("//div[@class='ng-tns-c4-1 ng-star-inserted ng-trigger ng-trigger-flyInOut ngx-toastr toast-error']");
 
+
+    @FindBy(xpath = "//div[@class='ng-tns-c4-1 ng-star-inserted ng-trigger ng-trigger-flyInOut ngx-toastr toast-error']")
+    WebElement errorlog;
 
     public void enterUserName(String userName)
     {
         username.sendKeys(userName);
+    }
+
+    public String getLoginError()
+    {
+        waitForTheWebElementoAppear(errorMessage);
+        return errorlog.getText();
     }
 
     public void enterPassword(String userpassowrd)

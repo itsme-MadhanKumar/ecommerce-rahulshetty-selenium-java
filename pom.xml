@@ -71,8 +71,9 @@
     </dependency>
   </dependencies>
 
-  <!-- ✅ Corrected Profile Section -->
   <profiles>
+
+    <!-- Profile for Extent Reports -->
     <profile>
       <id>ExtendedReports</id>
       <build>
@@ -90,7 +91,33 @@
         </plugins>
       </build>
     </profile>
+
+    <!-- Profile for Cucumber TestNG Runner -->
+    <profile>
+      <id>CucumberTest</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.5.4</version>
+            <configuration>
+              <includes>
+                <include>**/TestNgTestRunner.java</include>
+              </includes>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
+
+
+
+
+
+
+
 
   <build>
     <pluginManagement>

@@ -1,8 +1,10 @@
+@tag
 Feature: purchase the order from exommerce website
 
 
   Background: I landed on Rahulshetty ecommerce page
 
+    @Regression
   Scenario Outline:Positive testcase of submiting order
     Given login using username <username> and password <password>
     When I add product <productname> to cart
