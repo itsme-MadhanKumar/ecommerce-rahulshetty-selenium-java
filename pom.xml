@@ -106,6 +106,7 @@
                 <include>**/TestNgTestRunner.java</include>
               </includes>
             </configuration>
+
           </plugin>
         </plugins>
       </build>
